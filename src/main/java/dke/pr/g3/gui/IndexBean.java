@@ -1,4 +1,4 @@
-package dke.pr.g3;
+package dke.pr.g3.gui;
 
 import java.io.IOException;
 import java.util.Arrays;
