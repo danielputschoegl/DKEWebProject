@@ -2,10 +2,11 @@ package dke.pr.g3.gui;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 import dke.pr.cli.CBRInterface;
 
-public class IndexBean {
+public class IndexBeanAndi {
 	CBRInterface fl;
 
 	public String init() throws IOException {
@@ -21,23 +22,60 @@ public class IndexBean {
 		return "ready";
 	}
 
+	public String detUnusedParameterValues() throws IOException {
+		String out = "";
+		out += ("UnusedVal:  " + fl.detUnusedParameterValues());
+		return out;
+	}
+
+	public String newBC() throws IOException {
+		String out = "";
+
+		out += "new BusinessCase: Andi<br>";
+		out += "" + fl.newBusinessCase("Andi");
+		return out;
+	}
+
+	// public String setParameterValues() {
+	// String out = "";
+	// fl.addParameter(name, rootValue, detParamDef)
+	// return out;
+	// }
+	//
 	public String getParameter() throws IOException {
 		String out = "";
 		out += fl.getParameters();
 		return out;
 	}
+
 	public String delParameter() throws IOException {
 		String out = "";
 		fl.delParameter("Interest");
 		out += "delete: Interest";
 		return out;
 	}
-	
+
+	public String getContextHierarchy() throws IOException {
+		String out = "";
+		List hir = fl.getCtxHierarchy();
+		/*
+		 * Object[] hier = fl.getCtxHierarchy().toArray(); for(int i = 0; i <
+		 * hier.length; i++) { out+=hier[i].toString()+";<br>"; }
+		 */
+		for (int i = 0; i < hir.size(); i++) {
+			out += hir.get(i) + "<br>";
+		}
+		// out += "hierarchy: ";
+		// out += fl.getCtxHierarchy();
+		return out;
+	}
+
 	public String getContext() throws IOException {
 		String out = "";
 		out += fl.getCtxs();
 		return out;
 	}
+
 	public String delContext() throws IOException {
 		String out = "";
 		fl.delCtx("landplane_onground_runwayClosure");
@@ -54,7 +92,7 @@ public class IndexBean {
 				"${aircraft_name:AIMCtx[Interest->aircraft,FlightPhase->arrival,EventScenario->closure,file->'OO/Contexts/aircraft_name.flr']@ctxModel}"));
 		return out;
 	}
-	
+
 	public String getData() {
 
 		String out = "";

@@ -7,9 +7,8 @@ import dke.pr.cli.CBRInterface;
 
 public class testStaticModel {
 	public static void main(String[] args) throws IOException {
-		CBRInterface fl = new CBRInterface("~/flora2/CBRM/ctxModelAIM.flr",
-				"~/flora2/CBRM/bc.flr", "AIMCtx", "SemNOTAMCase");
-
+		CBRInterface fl = new CBRInterface("C:/Users/Anderas/Flora-2/CBRM/ctxModelAIM.flr",
+				"C:/Users/Anderas/Flora-2/CBRM/bc.flr", "AIMCtx", "SemNOTAMCase");
 		fl.setDebug(false);
 
 		System.out.println("Contexts: " + fl.getCtxs());

@@ -18,7 +18,7 @@ public class Flora2CLI {
 	private boolean debug = true;
 
 	/**
-	 * object for communicating with flora2 shell
+	 * object for commAnderascating with flora2 shell
 	 */
 	private Process process;
 
@@ -43,7 +43,7 @@ public class Flora2CLI {
 	 */
 	public Flora2CLI() throws IOException {
 		ProcessBuilder builder = new ProcessBuilder(
-				"C:\\Users\\Uni\\Flora-2\\flora2\\runflora.bat");
+				"C:\\Users\\Anderas\\Flora-2\\flora2\\runflora.bat");
 
 		builder.redirectErrorStream(true);
 

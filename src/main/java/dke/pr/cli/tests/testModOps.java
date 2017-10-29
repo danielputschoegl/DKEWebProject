@@ -8,8 +8,8 @@ import dke.pr.cli.CBRInterface;
 public class testModOps {
 
 	public static void main(String[] args) throws IOException {
-		CBRInterface fl = new CBRInterface("C:/Users/Uni/Flora-2/CBRM/ctxModelAIM.flr",
-				"C:/Users/Uni/Flora-2/CBRM/bc.flr", "AIMCtx", "SemNOTAMCase");
+		CBRInterface fl = new CBRInterface("C:/Users/Anderas/Flora-2/CBRM/ctxModelAIM.flr",
+				"C:/Users/Anderas/Flora-2/CBRM/bc.flr", "AIMCtx", "SemNOTAMCase");
 
 		fl.setDebug(false);
 
